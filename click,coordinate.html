@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<br lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌표찾기</title>
+    <style>
+        .box{
+            background-color: thistle;
+            display: inline-block;
+            padding: 50px;
+        }
+        .clickbox {
+            background-color: black;
+            display: inline-block;
+            padding: 50px;
+        }
+    </style>
+</head>
+    
+    <div class="box">
+        
+    </div> </br>
+    <div class="box">
+        
+    </div> </br>
+    <div class="clickbox">
+        
+    </div> </br>
+    <div class="box">
+        
+    </div> </br>
+    <div class="box">
+    </div> </br>
+    <div class="box">
+        
+    </div> </br>
+    <div class="box">
+        
+    </div> </br>
+    <div class="box">
+        
+    </div> </br>
+    <div class="box">
+        
+    </div> </br>
+    <div class="box">
+        
+    </div> </br>
+    <div class="box">
+        
+    </div> </br>
+    <div class="clickbox">
+    </div></br>
+    <div class="box">
+        
+    </div> </br>
+
+    <script>
+        const clickbox = document.querySelector('.clickbox');
+        clickbox.addEventListener('click' , (event)=> {
+            const rect = clickbox.getBoundingClientRect();
+            console.log(rect);
+        });
+    
+    
+        
+    </script>
+</body>
+</html>
