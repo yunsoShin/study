@@ -16,6 +16,12 @@
             display: inline-block;
             padding: 50px;
         }
+        aside{
+            position: fixed;
+            top: 20px;
+            right: 20px;
+
+        }
         
     </style>
 </head>
@@ -61,11 +67,11 @@
         
         
         });
-        const by100px = document.querySelector('.by100px');
-        by100px.addEventListener('click' , (event)=> {
-            window.scroll(0,100);
+        const scrollby = document.querySelector('.by100px');
+        scrollby.addEventListener('click' , ()=> {
+            window.scrollBy(0,100);
 
-        })
+        });
     
     
         
