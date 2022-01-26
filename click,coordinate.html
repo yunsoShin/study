@@ -23,7 +23,7 @@
     <div class="box">
     </div>  
     
-    <button class="by100px" style=" position: relative;" onclick="window.scroll( 0,100);">100px아래로</button>
+    <button class="by100px" style=" position: relative;">100px아래로</button>
     <button class="to100px" style=" position: relative;"onclick="window.scrollTo( 0,100);">100px로 이동</button>
     <button class="moveclickBox" style=" position: relative;"onclick="window.scrollTo( 0,600);">clickbox로 이동</button>
     </br>
@@ -61,6 +61,11 @@
         
         
         });
+        const by100px = document.querySelector('.by100px');
+        by100px.addEventListener('click' , (event)=> {
+            window.scroll(0,100);
+
+        })
     
     
         
