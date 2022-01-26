@@ -18,12 +18,19 @@
 <body>
     <div class="tag">window size</div>
     <script>
-        const tag = ""
+        const tag = document.querySelector('.tag');
         window.addEventListener('resize' , () => {
-            console.log(`window.screen ${window.screen.width},${window.screen.height}`); 
-            console.log(`window.inner ${window.innerHeight},${window.innerWidth}`); 
-            console.log(`window.outer ${window.outerWidth},${window.outerHeight}`); 
-            console.log(`docummentElement.clientWidth: ${document.documentElement.clientHeight},${document.documentElement.clientWidth }`)
+            tag.innerHTML = `
+            window.outer ${window.outerWidth},${window.outerHeight},
+            window.inner ${window.innerHeight},${window.innerWidth},
+            window.screen ${window.screen.width},${window.screen.height},
+            docummentElement.clientWidth: ${document.documentElement.clientHeight},${document.documentElement.clientWidth}
+            
+            `;
+            
+            
+            
+            
         })
     </script>
 </body>
