@@ -17,18 +17,19 @@
 </head>
 <body>
     <div class="tag">window size</div>
-    <script>
+    <script>        
+        const tag = document.querySelector('.tag');
         function updateTag() {
             tag.innerHTML = `
-            window.outer ${window.outerWidth},${window.outerHeight}, </br>
-            window.inner ${window.innerHeight},${window.innerWidth}, </br>
-            window.screen ${window.screen.width},${window.screen.height}, </br> 
+            window.outer ${outerWidth},${outerHeight}, </br>
+            window.inner ${innerHeight},${innerWidth}, </br>
+            window.screen ${screen.width},${screen.height}, </br> 
             docummentElement.clientWidth: ${document.documentElement.clientHeight},${document.documentElement.clientWidth} </br>
             
             `;
             
         }
-        const tag = document.querySelector('.tag');
+
         window.addEventListener('resize' , () => {
             updateTag();
         })
