@@ -16,13 +16,10 @@
             display: inline-block;
             padding: 50px;
         }
-        
     </style>
 </head>
-    
     <div class="box">
     </div>  
-    
     <button class="by100px" style=" position: relative;" onclick="window.scroll( 0,100);">100px아래로</button>
     <button class="to100px" style=" position: relative;"onclick="window.scrollTo( 0,100);">100px로 이동</button>
     <button class="moveclickBox" style=" position: relative;"onclick="window.scrollTo( 0,600);">clickbox로 이동</button>
@@ -48,9 +45,7 @@
     <div class="clickbox">
     </div></br>
     <div class="box">
-        
     </div> </br>
-
     <script>
         const clickbox = document.querySelector('.clickbox');
         clickbox.addEventListener('click' , (event)=> {
@@ -58,12 +53,7 @@
             console.log(rect);
             console.log(`client : ${event.clientX},${event.clientY}`);
             console.log(`page: ${event.pageX},${event.pageY}`)
-        
-        
         });
-    
-    
-        
     </script>
 </body>
 </html>
