@@ -16,6 +16,8 @@
             display: inline-block;
             padding: 50px;
         }
+<<<<<<< HEAD
+=======
         aside{
             position: fixed;
             top: 20px;
@@ -23,16 +25,22 @@
 
         }
         
+>>>>>>> 8b4942f52b7fdc022b27d367a273ab0e21dd3628
     </style>
 </head>
-    
     <div class="box">
     </div>  
+<<<<<<< HEAD
+    <button class="by100px" style=" position: relative;" onclick="window.scroll( 0,100);">100px아래로</button>
+    <button class="to100px" style=" position: relative;"onclick="window.scrollTo( 0,100);">100px로 이동</button>
+    <button class="moveclickBox" style=" position: relative;"onclick="window.scrollTo( 0,600);">clickbox로 이동</button>
+=======
     <aside>
         <button class="by100px">100px아래로</button>
         <button class="to100px"onclick="window.scrollTo(0,100);">100px로 이동</button>
         <button class="moveclickBox"onclick="window.scrollTo(105,1164);">clickbox로 이동</button>
     </aside>
+>>>>>>> 8b4942f52b7fdc022b27d367a273ab0e21dd3628
     </br>
     <div class="box">
     </div> </br>
@@ -55,9 +63,7 @@
     <div class="clickbox">
     </div></br>
     <div class="box">
-        
     </div> </br>
-
     <script>
         const clickbox = document.querySelector('.clickbox');
         clickbox.addEventListener('click' , (event)=> {
@@ -65,9 +71,9 @@
             console.log(rect);
             console.log(`client : ${event.clientX},${event.clientY}`);
             console.log(`page: ${event.pageX},${event.pageY}`)
-        
-        
         });
+<<<<<<< HEAD
+=======
         const scrollby = document.querySelector('.by100px');
         scrollby.addEventListener('click' , ()=> {
             window.scrollBy(0,100);
@@ -76,6 +82,7 @@
     
     
         
+>>>>>>> 8b4942f52b7fdc022b27d367a273ab0e21dd3628
     </script>
 </body>
 </html>
