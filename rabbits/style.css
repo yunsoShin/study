@@ -20,5 +20,8 @@ body {
   position: relative;
   left: 50%;
   transform: translate(-50%);
-  background-color: brown;
+  background-color: tomato;
+  outline: none;
+  cursor: pointer;
+  margin: 16px 0;
 }
