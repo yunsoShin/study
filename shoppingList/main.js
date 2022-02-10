@@ -4,17 +4,11 @@ const List = document.querySelector('.List');
 
 
 addEventListener('load' , ()=>{
-    
-    
-    
     Add_listButton.addEventListener('click' , ()=>{
         const temp = document.createElement('li');
         temp.innerHTML = Add_ListBox.value;
         List.appendChild(temp);
-        
-
-        
-
-    
+        temp.innerHTML += "<button>삭제</button>";
     })
+
 });
