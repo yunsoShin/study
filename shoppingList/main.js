@@ -1,9 +1,7 @@
-const addList = document.querySelector('#addlist');
-const write_list = document.querySelector('.write_list');
-const Addlistbutton = document.querySelector('.Addlistbutton');
+const Add_listButton = document.querySelector('.Add_listButton');
 
 addEventListener('load' , ()=>{
-    Addlistbutton.addEventListener('click' , ()=>{
+    Add_listButton.addEventListener('click' , ()=>{
         console.log("클릭!");
     
     
