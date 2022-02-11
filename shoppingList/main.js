@@ -6,13 +6,23 @@ const List = document.querySelector('.List');
 addEventListener('load' , ()=>{
     Add_listButton.addEventListener('click' , ()=>{
         const temp = document.createElement('li');
-        const ListButton = document.createElement('button');
-        const DeleteText =  document.createTextNode('삭제');
+        const Delete_button=document.createElement('button');
+        const Check_button = document.createElement('button');
+
         temp.innerHTML = Add_ListBox.value;
+
+        Delete_button.innerHTML = "❌";
+        Check_button.innerHTML = "☑️";
+        Delete_button.addEventListener('click' , (event)=>{
+            const reMoving = event.target;
+            
+
+        })
+        temp.appendChild(Check_button);
+        temp.appendChild(Delete_button);
         List.appendChild(temp);
-        ListButton.innerHTML = DeleteText.nodeValue;
+
         
-        List.appendChild(ListButton);
         
 
         })
