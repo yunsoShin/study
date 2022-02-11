@@ -14,7 +14,8 @@ addEventListener('load' , ()=>{
         Delete_button.innerHTML = "❌";
         Check_button.innerHTML = "☑️";
         Delete_button.addEventListener('click' , (event)=>{
-            const reMoving = event.target;
+            event.target.temp
+            
             
 
         })
