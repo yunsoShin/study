@@ -5,22 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping List</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
+    <section class="List">
         <header class="Shopping__top">
             Shopping List
         </header>
         <ul>
-            <li class="List">
+            <li class="List_Line">
                 <div class="List__Item">
                     <span class="Item__name">우유</span>
                     <button class="delete__Btn">❌</button>
                 </div>
+                <div class="item__divider"></div>
             </li>
         </ul>
 
-        <footer>
+        <footer class="footer">
             <button class="Add_Btn">➕</button><br>
             <input type="text" name="Add_List" id="Add_List">
         </footer>

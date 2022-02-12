@@ -1,22 +1,62 @@
+*{
+    box-sizing: border-box;
+}
 body{
+    background-color: azure;
+    text-align: center;
+}
+.Shopping__top{
+    padding: 8px;
+    height: 38px;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     
 
 }
+
 .List{
-    position: relative;
-    left: 50%;
+    overflow-y: auto;
+    width: 400px;
+    margin: auto;
+    background-color:floralwhite;
+    border-radius: 20px;
+
 }
-.List_header{
-    font-size: 50px;
-    position: relative;
-    left: 50%;
-    transform: translate(-5%);
-    color: darkorange;
+.List_Line{
+    height: 500px;
 }
 
-.addList{
-    position: relative;
-    
-    left: 50%;
+.List__Item{
+    overflow-y: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 25px;
+
 }
+.delete__Btn{
+    height: 25px;
+
+
+}
+
+
+.item__divider{
+    
+    background-color: black;
+    font-weight: 80%;
+    height: 1px;
+    margin: auto;
+}
+
+.footer{
+    height: 50px;
+    border-radius: 0,20px;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+
+
+
+
 
