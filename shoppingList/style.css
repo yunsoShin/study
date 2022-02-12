@@ -5,32 +5,41 @@ body{
     background-color: azure;
     text-align: center;
 }
-.Shopping__top{
-    padding: 8px;
+
+.List{
+    width: 400px;
+    
+    
+    
+}
+
+.header{
+    
     height: 38px;
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border-radius: 8px 8px 0px 0px;
     
 
 }
 
-.List{
-    overflow-y: auto;
-    width: 400px;
-    margin: auto;
-    background-color:floralwhite;
-    border-radius: 20px;
-
-}
-.List_Line{
+.items{
     height: 500px;
-}
-
-.List__Item{
     overflow-y: auto;
+    background-color:floralwhite;
+}
+.item{
+    
     display: flex;
     justify-content: space-between;
-    padding: 8px 25px;
+    
+}
+
+.Item__name{
+    
+    
+    
+    
 
 }
 .delete__Btn{
@@ -43,16 +52,17 @@ body{
 .item__divider{
     
     background-color: black;
-    font-weight: 80%;
+    font-weight: 90%;
     height: 1px;
     margin: auto;
 }
 
 .footer{
     height: 50px;
-    border-radius: 0,20px;
+    border-radius: 8,20px;
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border-radius: 0px 0px 8px 8px;
 }
 
 
