@@ -19,6 +19,7 @@ document.addEventListener('mousemove' , (event) => {
     console.log("move!");
 
     
+
     console.log(`page: ${event.clientX},${event.clientY}`)
     vertical.style.transform = `translateX(${x}px)`;
     horizontal.style.transform = `translateY(${y}px)`;
