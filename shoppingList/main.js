@@ -5,6 +5,10 @@ const Add__List = document.querySelector('#Add__List')
 
 function onAdd() {
     const text = Add__List.value
+    if(text ===  ''){
+        Add__List.focus();
+        return;
+    }
     const item = createItem(text);
     items.appendChild(item);
     console.log(text);
@@ -44,3 +48,10 @@ function createItem(text){
 
     return itemRow;
 }
+
+Add__List.addEventListener('keypress' , (event) => {
+    if(event.key === 'Enter'){
+        onAdd();
+    }
+    console.log('key');
+});
