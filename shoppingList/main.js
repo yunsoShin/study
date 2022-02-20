@@ -21,6 +21,9 @@ Add__Btn.addEventListener('click' , ()=>{
 })
 
 function createItem(text){
+
+
+
     const itemRow = document.createElement('li');
     itemRow.setAttribute('class','item__row');
     
@@ -40,6 +43,7 @@ function createItem(text){
     const itemDivider = document.createElement('div');
     itemDivider.setAttribute('class','item__divider');
 
+    
     item.appendChild(name);
     item.appendChild(DBtn);
 
