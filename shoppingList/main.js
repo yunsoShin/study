@@ -44,6 +44,7 @@ function createItem(text){
     itemDivider.setAttribute('class','item__divider');
 
     
+
     item.appendChild(name);
     item.appendChild(DBtn);
 
