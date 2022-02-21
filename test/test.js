@@ -3,6 +3,7 @@ console.log('js load');
 const obj = {
     name: 'yunsoo',
 
+
     
     age: '20'
 };
