@@ -1,0 +1,17 @@
+body{
+    
+}
+
+.backgroundIMG{
+    width: 1200px;
+    height: 600px;
+
+}
+.info{
+    position: absolute;
+    transform: translate(550px,-550px);
+}
+.info_Btn{
+    height: 50px;
+    width: 50px;
+}
