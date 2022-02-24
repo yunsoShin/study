@@ -28,26 +28,48 @@ body {
 
 .game__timer {
   background-color: aliceblue;
-  margin: auto;
   border: 2px solid black;
   border-radius: 5px;
+  width: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 50px;
+  height: 50px;
 }
 
 .game__score {
   position: absolute;
-
-  transform: translate(-11.5px, 10px);
+  transform: translate(-20px, 10px);
   border: 2px solid black;
   background-color: lightgoldenrodyellow;
-  border-radius: 10px;
-  height: 20px;
-  font-weight: 20px;
-  width: 20px;
+  border-radius: 30px;
+  height: 35px;
+  width: 40px;
+  font-size: 25px;
+  padding-top: 5px;
 }
 
 .pop-up {
   position: absolute;
-  height: 200px;
-  width: 511px;
-  transform: translate(300px, -100px);
+  height: 80px;
+  width: 250px;
+  transform: translate(200px, -200px);
+  text-align: center;
+  background-color: darkgray;
+  padding: 40px;
+  padding-top: 15px;
+  opacity: 80%;
+  border-radius: 16%;
+}
+
+.pop-up__refresh {
+  height: 45px;
+  width: 45px;
+  border-color: black;
+  border-radius: 15%;
+  border-width: 1px;
+  background-color: antiquewhite;
+}
+.pop-up__message {
+  font-size: 30px;
 }
