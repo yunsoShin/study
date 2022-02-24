@@ -7,30 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="main.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d077334562.js" crossorigin="anonymous"></script>
+
     <title>Document</title>
 </head>
 <body>
-    <section class="rabitgame">
-        <img src="/img/background.png" alt="backgroundIMG" class="backgroundIMG">
+    <section class="game">
+        <img src="img/background.png" alt="background" class="background">
         
-        <header class="header">
-            <div class="info">
-                <button class="info_Btn">
-                    ▶︎
+        <header class="game__header">
+            <section class="game__field">
+                <button class="gmae_Btn">
+                    <i class="fa-solid fa-circle-play"></i>
                 </button><br>
-                <span class="info__timer">
-                    00:00
-                    
+                <span class="game__timer">
+                0:0
                 </span><br>
-                <span class="info__counterCarrot">10개 남았습니다
-
+                <span class="game__score">
+                    10
                 </span>
-            </div>
+            </section>
         </header>
 
         <footer class="Ingame">
             
         </footer>
     </section>
+    <section class="pop-up">
+        <button class="pop-up__refresh">
+            <i class="fa-solid fa-arrow-rotate-right"></i>
+        </button>
+        <span class="pop-up__message">
+            다시 시작하십시오
+        </span>
+    </section>
+
+
+
 </body>
 </html>
