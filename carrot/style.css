@@ -1,71 +1,99 @@
-body { 
+body{
+  text-align: center;
 }
 
+button{
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
 .game{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
   width: 850px;
   height: 400px;
   background: url(img/background.png) center/cover;
 
 
 }
-.game__header {
+
+.game__header{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
   
   
-  text-align: center;
+
 }
 
 .game__field {
+  opacity: 0.4;
   height: 100%;
   width: 100%;
-  background-color: aqua;
+  
 }
 
 
 
 
 .gmae_Btn {
-  margin: 5px;
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
+  background-color: wheat;
+  border: 4px solid black;
+  font-size: 24px;
+  transition: transform 300ms ease-in;
+}
+.gmae_Btn:hover{
+  transform: scale(1.1);
 }
 
 .game__timer {
   background-color: aliceblue;
-  border: 2px solid black;
+  border: 5px solid black;
   border-radius: 5px;
   width: 100px;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin: 50px;
-  height: 50px;
+  
+  text-align: center;
+  font-size: 32px;
+  margin-top: 8px;
 }
 
 .game__score {
   
-  transform: translate(-20px, 10px);
+  margin-top: 8px;
   border: 2px solid black;
   background-color: lightgoldenrodyellow;
-  border-radius: 30px;
-  height: 35px;
-  width: 40px;
-  font-size: 25px;
-  padding-top: 5px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  font-size: 45px;
+  text-align: center;
+  
 }
 
 .pop-up {
-  
+  display: block;
+  margin: auto;
   height: 80px;
   width: 250px;
-  transform: translate(200px, -200px);
+  transform: translateY(-120%);
   text-align: center;
-  background-color: darkgray;
+  background-color: #00000080;
   padding: 40px;
   padding-top: 15px;
-  opacity: 80%;
+  
   border-radius: 16%;
 }
 
+.pop-up--hide{
+  display: none;
+}
+
 .pop-up__refresh {
+  margin-bottom: 8px;
   height: 45px;
   width: 45px;
   border-color: black;
@@ -75,4 +103,5 @@ body {
 }
 .pop-up__message {
   font-size: 30px;
+  color: aliceblue;
 }
