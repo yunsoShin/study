@@ -1,29 +1,25 @@
-body {
-  margin: auto;
+.game {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  height: 500px;
+  background: center/cover;
 }
 
-.background {
-  height: 400px;
-}
 .game__header {
-  position: absolute;
-  transform: translate(40%, -400px);
   text-align: center;
 }
 
 .game__field {
-  height: 400px;
-  width: 400px;
+  height: 100%;
+  width: 100%;
+  background-color: black;
 }
 
 .gmae_Btn {
   margin: 5px;
   height: 40px;
   width: 40px;
-}
-
-.game {
-  height: auto;
 }
 
 .game__timer {
@@ -38,8 +34,6 @@ body {
 }
 
 .game__score {
-  position: absolute;
-  transform: translate(-20px, 10px);
   border: 2px solid black;
   background-color: lightgoldenrodyellow;
   border-radius: 30px;
