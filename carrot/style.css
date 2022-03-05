@@ -92,7 +92,7 @@ button{
   display: none;
 }
 
-.pop-up__refresh {
+.popup__refresh {
   margin-bottom: 8px;
   height: 45px;
   width: 45px;
