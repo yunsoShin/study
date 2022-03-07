@@ -45,7 +45,7 @@ function addItem(className, count ,imgPath){
     const x2 = fieldRect.width;
     const y2 = fieldRect.height;
     
-    for(let i=0; i<count; i++){
+    for(let i=0; i<count; i--){
         const item =document.createElement('img');
         item.setAttribute('src',imgPath);
         item.setAttribute('class',className);
