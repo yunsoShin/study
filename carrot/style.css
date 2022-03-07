@@ -1,52 +1,42 @@
-body{
+body {
   text-align: center;
 }
 
-button{
+button {
   border: none;
   outline: none;
   cursor: pointer;
 }
-.game{
+.game {
   margin: auto;
   display: flex;
   flex-direction: column;
   width: 850px;
-  height: 400px;
+  height: 550px;
   background: url(img/background.png) center/cover;
-
-
 }
 
-.game__header{
+.game__header {
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  
-  
-
+  padding: 10px;
 }
 
 .game__field {
-  opacity: 0.4;
   height: 100%;
   width: 100%;
-  
 }
 
-
-
-
 .gmae_Btn {
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   background-color: wheat;
   border: 4px solid black;
   font-size: 24px;
   transition: transform 300ms ease-in;
 }
-.gmae_Btn:hover{
+.gmae_Btn:hover {
   transform: scale(1.1);
 }
 
@@ -55,14 +45,13 @@ button{
   border: 5px solid black;
   border-radius: 5px;
   width: 100px;
-  
+
   text-align: center;
   font-size: 32px;
   margin-top: 8px;
 }
 
 .game__score {
-  
   margin-top: 8px;
   border: 2px solid black;
   background-color: lightgoldenrodyellow;
@@ -71,7 +60,6 @@ button{
   width: 50px;
   font-size: 45px;
   text-align: center;
-  
 }
 
 .pop-up {
@@ -84,11 +72,11 @@ button{
   background-color: #00000080;
   padding: 40px;
   padding-top: 15px;
-  
+
   border-radius: 16%;
 }
 
-.pop-up--hide{
+.pop-up--hide {
   display: none;
 }
 
@@ -104,4 +92,21 @@ button{
 .pop-up__message {
   font-size: 30px;
   color: aliceblue;
+}
+
+.carrot {
+  height: 50px;
+  width: 50px;
+}
+
+.bug {
+  height: 50px;
+  width: 50px;
+}
+
+.bug:hover {
+  transform: scale(1.05);
+}
+.carrot:hover {
+  transform: scale(1.1);
 }
