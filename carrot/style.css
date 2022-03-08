@@ -28,8 +28,11 @@ button {
   height: 100%;
   width: 100%;
 }
+.game__stop{
+  display: none;
+}
 
-.gmae_Btn {
+.game_Btn {
   height: 50px;
   width: 50px;
   background-color: wheat;
@@ -37,7 +40,7 @@ button {
   font-size: 24px;
   transition: transform 300ms ease-in;
 }
-.gmae_Btn:hover {
+.game_Btn:hover {
   transform: scale(1.1);
 }
 
