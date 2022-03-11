@@ -6,14 +6,22 @@ const game__timer = document.querySelector('.game__timer');
 const popup__refresh = document.querySelector('.popup__refresh');
 const bug = document.querySelector('.bug');
 const carrot = document.querySelector('.carrot');
-const score = document.querySelector('.game__score');
+const game__score = document.querySelector('.game__score');
 const fieldRect = game__field.getBoundingClientRect();
+const bug__count = 5;
+const carrot__count = 5;
+const Game__Durattion = 5;
+let gameStarted = false;
+let score =0;
+let timers =undefined;
+
+
 
 
 function initGame() {
-    console.log(fieldRect);
-    addItem('carrot' , 5 , 'img/carrot.png');
-    addItem('bug' , 5 , 'img/bug.png');
+    game__field.innerHTML = '';
+    addItem('carrot' , carrot__count , 'img/carrot.png');
+    addItem('bug' , bug__count , 'img/bug.png');
 }
 function addItem(className, count ,imgPath){
     const x1 = 0;
@@ -32,7 +40,7 @@ function addItem(className, count ,imgPath){
         item.style.top=`${y}px`;
         game__field.appendChild(item);
     }
-    score.innerHTML = count
+    
 }
 
 function randomNumber(min,max){
@@ -40,24 +48,64 @@ function randomNumber(min,max){
 }
 
 game_Btn.addEventListener('click',()=>{
-    
-    game_Btn.setAttribute('class','game__stop');
-    initGame();
-    let time = 5;
-    let timer = setInterval(function(){
-        
-            game__timer.innerHTML =`0:${time}`;
-            time--
-            console.log(time);
-            if(time<0){
-                replay();
-                clearInterval(timer);
-            }
-        
-    }, 1000)
 
+    if(gameStarted){
+        stopGame();
+        
+    }
+    else{
+        startGame();
+        
+    }
+    gameStarted =!gameStarted;
 })
 
-function replay(){
+function startGame(){
+    initGame();
+    showStartgame();
+    showTimerandScore();
+    startTimer();
+}
+function showStartgame(){
+    const icon = document.querySelector('.fa-circle-play');
+    icon.classList.add('fa-stop');
+    icon.classList.remove('fa-play')
+
+
     
-};
+}
+
+function stopGame(){
+    console.log('시간초과');
+    stopTimer();
+
+    
+}
+
+function startTimer(){
+    let sec = Game__Durattion%60;
+    let min = Math.floor(Game__Durattion/60);
+    timers=setTimeout(function Timer(){
+        if(sec>=0){
+            game__timer.innerHTML=`${min}:${sec}`;
+            setTimeout(Timer,1000);
+            sec--;
+        }
+        else{
+            stopTimer();
+            return;
+        }
+        
+    },0);
+}
+function stopTimer(){
+    clearTimeout(timers);
+    
+}
+
+function showTimerandScore(){
+    game__timer.style.visibility = 'visible';
+    game__score.style.visibility = 'visible';
+    game__score.innerHTML = score
+    
+}
