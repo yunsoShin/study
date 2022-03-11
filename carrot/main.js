@@ -83,23 +83,26 @@ function stopGame(){
 }
 
 function startTimer(){
-    let sec = Game__Durattion%60;
-    let min = Math.floor(Game__Durattion/60);
-    timers=setTimeout(function Timer(){
-        if(sec>=0){
-            game__timer.innerHTML=`${min}:${sec}`;
-            setTimeout(Timer,1000);
-            sec--;
+    let Timesec=Game__Durattion;
+    updateSec(Timesec);
+    timers=setInterval(()=>{
+        if(Timesec>0){
+            updateSec(--Timesec)
         }
         else{
-            stopTimer();
+            clearInterval(timers);
             return;
         }
-        
-    },0);
+    },1000);
 }
+function updateSec(time){
+    let sec = time%60;
+    let min = Math.floor(time/60);
+    game__timer.innerHTML=`${min}:${sec}`;
+}
+
 function stopTimer(){
-    clearTimeout(timers);
+    clearInterval(timers);
     
 }
 
