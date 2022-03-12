@@ -11,8 +11,10 @@ const fieldRect = game__field.getBoundingClientRect();
 const bug__count = 5;
 const carrot__count = 5;
 const Game__Durattion = 5;
+const popup__message=document.querySelector('.pop-up__message');
+const popup = document.querySelector('.pop-up');
 let gameStarted = false;
-let score =0;
+let score =5;
 let timers =undefined;
 
 
@@ -39,19 +41,47 @@ function addItem(className, count ,imgPath){
         item.style.left=`${x}px`;
         item.style.top=`${y}px`;
         game__field.appendChild(item);
+        item.addEventListener('click',()=>{
+            if(item.className === 'carrot'){
+                console.log('click!');
+                game__field.removeChild(item);
+                game__score.innerHTML = --score
+                if(score===0){
+                    Tosucceed();
+                }
+            }
+
+
+            if(item.className === 'bug'){
+                popup__message.innerHTML = 'fail'
+                stopGame();
+            }
+                
+        })
     }
     
+    
+}
+function Tosucceed(){
+    popup__message.innerHTML = 'To succeed!';
+    popup.classList.remove('pop-up--hide');
+    stopTimer();
+
+    popup__refresh.addEventListener('click',()=>{
+        score=5;
+        popup.classList.add('pop-up--hide');
+        startGame();
+
+    })
+
 }
 
 function randomNumber(min,max){
     return Math.random()*(max - min)+min
 }
-
 game_Btn.addEventListener('click',()=>{
-
     if(gameStarted){
         stopGame();
-        
     }
     else{
         startGame();
@@ -66,20 +96,33 @@ function startGame(){
     showTimerandScore();
     startTimer();
 }
+
+
+
+
 function showStartgame(){
     const icon = document.querySelector('.fa-circle-play');
     icon.classList.add('fa-stop');
-    icon.classList.remove('fa-play')
-
-
-    
+    icon.classList.remove('fa-play');
 }
 
 function stopGame(){
     console.log('시간초과');
     stopTimer();
+    hidegamebtn();
+    popup__refresh.addEventListener('click',()=>{
+        game_Btn.style.visibility='visible';
+        popup.classList.add('pop-up--hide');
+        startGame();
+
+    })
 
     
+}
+function hidegamebtn(){
+    game_Btn.style.visibility='hidden';
+    popup.classList.remove('pop-up--hide');
+
 }
 
 function startTimer(){
@@ -103,12 +146,12 @@ function updateSec(time){
 
 function stopTimer(){
     clearInterval(timers);
-    
 }
 
 function showTimerandScore(){
     game__timer.style.visibility = 'visible';
     game__score.style.visibility = 'visible';
     game__score.innerHTML = score
+
     
 }
