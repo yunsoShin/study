@@ -41,13 +41,12 @@ function addItem(className, count ,imgPath){
         item.style.top=`${y}px`;
         game__field.appendChild(item);
         clickItem(item);
-                
-        
     }
-    
-    
 }
 function clickItem(obj){
+    if(gameStarted){
+        return;
+    }
     obj.addEventListener('click',()=>{
         if(obj.className === 'carrot'){
             game__field.removeChild(obj);
