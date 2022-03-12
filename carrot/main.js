@@ -17,14 +17,13 @@ let gameStarted = false;
 let score =5;
 let timers =undefined;
 
-
-
-
 function initGame() {
     game__field.innerHTML = '';
     addItem('carrot' , carrot__count , 'img/carrot.png');
     addItem('bug' , bug__count , 'img/bug.png');
 }
+
+
 function addItem(className, count ,imgPath){
     const x1 = 0;
     const y1 = 0;
@@ -43,37 +42,37 @@ function addItem(className, count ,imgPath){
         game__field.appendChild(item);
         item.addEventListener('click',()=>{
             if(item.className === 'carrot'){
-                console.log('click!');
                 game__field.removeChild(item);
                 game__score.innerHTML = --score
                 if(score===0){
                     Tosucceed();
                 }
             }
-
-
             if(item.className === 'bug'){
-                popup__message.innerHTML = 'fail'
-                stopGame();
+                Tofail();
             }
+            
                 
         })
     }
     
     
 }
+
+function Tofail(){
+    game__field.innerHTML = '';
+    popup__message.innerHTML = 'fail'
+    stopGame();
+    
+}
+
 function Tosucceed(){
+    stopTimer();
+    game__field.innerHTML = '';
     popup__message.innerHTML = 'To succeed!';
     popup.classList.remove('pop-up--hide');
-    stopTimer();
-
-    popup__refresh.addEventListener('click',()=>{
-        score=5;
-        popup.classList.add('pop-up--hide');
-        startGame();
-
-    })
-
+    hidegamebtn();
+    refresh();
 }
 
 function randomNumber(min,max){
@@ -95,6 +94,7 @@ function startGame(){
     showStartgame();
     showTimerandScore();
     startTimer();
+    
 }
 
 
@@ -106,16 +106,26 @@ function showStartgame(){
     icon.classList.remove('fa-play');
 }
 
-function stopGame(){
-    console.log('시간초과');
-    stopTimer();
-    hidegamebtn();
+function refresh(){
     popup__refresh.addEventListener('click',()=>{
+        gameStarted=false;
         game_Btn.style.visibility='visible';
         popup.classList.add('pop-up--hide');
+        score=carrot__count;
+        let Timesec=Game__Durattion;
         startGame();
+});
+}
 
-    })
+
+function stopGame(){
+    
+    stopTimer();
+    hidegamebtn();
+    refresh();
+
+
+    
 
     
 }
@@ -124,6 +134,7 @@ function hidegamebtn(){
     popup.classList.remove('pop-up--hide');
 
 }
+
 
 function startTimer(){
     let Timesec=Game__Durattion;
@@ -134,19 +145,30 @@ function startTimer(){
         }
         else{
             clearInterval(timers);
+            Tofail();
             return;
         }
     },1000);
 }
+
+
 function updateSec(time){
     let sec = time%60;
     let min = Math.floor(time/60);
     game__timer.innerHTML=`${min}:${sec}`;
 }
 
+
+
+
+
+
+
 function stopTimer(){
     clearInterval(timers);
 }
+
+
 
 function showTimerandScore(){
     game__timer.style.visibility = 'visible';
