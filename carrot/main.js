@@ -40,39 +40,45 @@ function addItem(className, count ,imgPath){
         item.style.left=`${x}px`;
         item.style.top=`${y}px`;
         game__field.appendChild(item);
-        item.addEventListener('click',()=>{
-            if(item.className === 'carrot'){
-                game__field.removeChild(item);
-                game__score.innerHTML = --score
-                if(score===0){
-                    Tosucceed();
-                }
-            }
-            if(item.className === 'bug'){
-                Tofail();
-            }
-            
+        clickItem(item);
                 
-        })
+        
     }
     
     
 }
+function clickItem(obj){
+    obj.addEventListener('click',()=>{
+        if(obj.className === 'carrot'){
+            game__field.removeChild(obj);
+            game__score.innerHTML = --score
+            if(score===0){
+                Tosucceed();
+            }
+        }
+        else{
+            Tofail();
+        }
+        
+})
+}
+
 
 function Tofail(){
+    stopGame();
     game__field.innerHTML = '';
     popup__message.innerHTML = 'fail'
-    stopGame();
+    clearInterval(timers);
+    
     
 }
 
 function Tosucceed(){
-    stopTimer();
+    stopGame();
     game__field.innerHTML = '';
     popup__message.innerHTML = 'To succeed!';
-    popup.classList.remove('pop-up--hide');
-    hidegamebtn();
-    refresh();
+    
+    
 }
 
 function randomNumber(min,max){
@@ -90,10 +96,13 @@ game_Btn.addEventListener('click',()=>{
 })
 
 function startGame(){
+    score=carrot__count;
+
     initGame();
     showStartgame();
     showTimerandScore();
     startTimer();
+
     
 }
 
@@ -111,8 +120,6 @@ function refresh(){
         gameStarted=false;
         game_Btn.style.visibility='visible';
         popup.classList.add('pop-up--hide');
-        score=carrot__count;
-        let Timesec=Game__Durattion;
         startGame();
 });
 }
@@ -132,7 +139,6 @@ function stopGame(){
 function hidegamebtn(){
     game_Btn.style.visibility='hidden';
     popup.classList.remove('pop-up--hide');
-
 }
 
 
@@ -173,7 +179,5 @@ function stopTimer(){
 function showTimerandScore(){
     game__timer.style.visibility = 'visible';
     game__score.style.visibility = 'visible';
-    game__score.innerHTML = score
-
-    
+    game__score.innerHTML = score;
 }
