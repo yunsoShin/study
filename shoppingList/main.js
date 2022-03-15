@@ -43,7 +43,7 @@ function createItem(text){
     const itemDivider = document.createElement('div');
     itemDivider.setAttribute('class','item__divider');
 
-
+    
     
 
     item.appendChild(name);
@@ -60,5 +60,5 @@ Add__List.addEventListener('keypress' , (event) => {
         onAdd();
     }
     console.log('key');
-    
+
 });
