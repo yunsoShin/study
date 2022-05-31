@@ -14,7 +14,21 @@ let IndexYu = 'yunjjang'[2.5] // undefined
 console.log(IndexYu);
 
 let gu = 9;
-let Name = 'yunJJang'+gu
+let Name = `yunJJang${gu}`
 console.log(Name);
 let TypeName = typeof(Name);
 console.log(TypeName);
+
+const yunsoo = { name: 'yunsoo', age: 24 }
+let yunsooAge = yunsoo.age
+console.log(yunsooAge)
+yunsoo.age = 25
+yunsoo.Weight = '59kg'
+
+console.log(yunsoo)
+delete yunsoo.Weight
+console.log(yunsoo)
+
+let AGE = 'age'
+let yunAge = yunsoo[AGE]
+console.log(yunAge)
