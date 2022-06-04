@@ -45,7 +45,7 @@ console.log(number[0],yun.age);*/
 let {name:name,age:age}=yun;*/
 
 //let name = yun.name;
-//let age = yun.age;
+//let age
 
 
 
