@@ -57,8 +57,88 @@ let { birthday: { year: patsBirthYear } } = pat;
 console.log(patsBirthYear);
 */
 
-let numbers = [1, 7, 2, 9]
+/*let numbers = [1, 7, 2, 9]
 let [first, second, ...others] = numbers
 
 console.log(numbers);
-console.log(others);
+console.log(others); //2,9
+*/
+
+/*console.log(0+NaN);//NaN
+console.log(0+Infinity);//Infinity
+console.log(0+false);//0
+console.log(0+true);//1
+console.log(0+null);//0
+console.log(0+undefined);//NaN
+*/
+
+/*console.log([]+[],'none') // none
+console.log({}+[]) //[object Object]
+console.log([]+{}) //[object Object]
+console.log({}+{}) //[object Object][object Object]
+console.log([]-{}) //NaN*/
+
+/*console.log(-5%2);//-1
+console.log(-6%2);//-0*/
+
+
+
+//console.log(avg('3','5'));
+//console.log(avg('삼','오'));
+/*
+function indexOf(arr, value) 
+{ 
+    for (let i in arr) 
+        {
+        if (arr[i] === value) return i 
+        }
+    return -1
+}
+
+let arr1 = [0,5,7,9,10];
+console.log(indexOf(arr1,3));
+*/
+
+/*function avg(x,y)
+{
+    return(x+y)/2;
+}
+
+let f = avg
+
+let result = f(1,5);
+console.log(result);
+
+f=Math.max
+
+console.log(f(1,5));
+*/
+/*function gop(x){
+    return x*10
+}
+let result = [0,1,2,4].map(gop);
+console.log(result);   
+
+let result = [0,1,2,4].map(function (x) { return 10*x });
+console.log(result);
+
+const average = (x, y) => 
+    (x + y) / 2
+const avg = function(x,y) {return(x+y)/2}
+console.log(average(1,7),avg(1,7)); 
+const gop10 = x=>x*10
+console.log(gop10(5));
+
+
+
+const dice = ()=>Math.trunc(Math.random()*6)+1 // error
+console.log(dice());
+
+const average = (x, y) => {
+    return
+    (x + y) / 2
+    }*/ 
+
+const arr = [2,4,6,8]
+arr.forEach((element, index) => { console.log(`${index}: ${element}`) })
+
