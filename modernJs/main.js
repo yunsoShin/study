@@ -140,5 +140,5 @@ const average = (x, y) => {
     }*/ 
 
 const arr = [2,4,6,8]
-arr.forEach((element, index) => { console.log(`${index}: ${element}`) })
+arr.forEach((element, index) => { console.log(`${index}: ${element}`)})
 
