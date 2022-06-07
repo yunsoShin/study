@@ -137,8 +137,8 @@ console.log(dice());
 const average = (x, y) => {
     return
     (x + y) / 2
-    }*/ 
+    }*/
 
-const arr = [2,4,6,8]
-arr.forEach((element, index) => { console.log(`${index}: ${element}`)})
+const arr = [2, 4, 6]
+arr.forEach((element, index) => { console.log(`${index}: ${element}`) })
 
