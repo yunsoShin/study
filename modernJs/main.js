@@ -137,8 +137,87 @@ console.log(dice());
 const average = (x, y) => {
     return
     (x + y) / 2
-    }*/
+    }
 
 const arr = [2, 4, 6]
 arr.forEach((element, index) => { console.log(`${index}: ${element}`) })
 
+
+
+const enclose = (tag, contents) =>`<${tag}>${contents}</${tag}>`
+const listItems = items.map(i => enclose('li', i))
+
+const listItems = items
+    .map(htmlEscape)
+    .map(i => enclose('li', i))
+
+
+const list = enclose( 
+    "ul",
+    items
+    .map(htmlEscape)
+    .map((i) => enclose("li", i)) 
+    .join("")
+    )
+
+
+//클로저
+
+setTimeout(() => console.log('윤짱!'), 4000)
+
+const saylater = (text, when) => 
+    {let task = () => console.log(text) 
+        setTimeout(task, when)}
+
+saylater('윤짱!',3000)
+saylater('개발일기',5000)
+
+
+
+let text = '윤짱의'
+console.log(text)
+setTimeout(() => console.log(text), 10000) 
+text = '개발일기'
+
+
+
+
+const average = (x, y) => (x + y) / 2
+let result = average(3, 4, 5) // 결과는 3.5로 마지막 인수는 무시됨
+
+
+const average=(x,y)=>y===undefined?x: (x+y)/2
+
+const average = (x, y = x) => (x + y) / 2
+
+const average = (first = 0, ...following) =>    
+{ 
+    let sum = first
+    for(const value of following)
+        { sum += value
+        }
+    return sum / (1 + following.length) 
+}
+
+
+console.log(average(1,10,20,1))
+
+let result = Math.max(31, 21, 45, 44, 100, 2, 5, 20) // result를 최대값으로 설정
+
+let numbers = [1, 7, 2, 9]
+result = Math.max(numbers) // NaN*/
+
+
+function hoisTing() {       // 블록 시작
+    function Work(){
+        console.log(some)   //변수접근가능
+        //~~~~~다른작업~~~~~~
+    }
+
+    let some=11            
+    Work() //11cnffur
+
+    }         
+hoisTing()
+
+    
