@@ -214,7 +214,7 @@ function hoisTing() {       // 블록 시작
         //~~~~~다른작업~~~~~~
     }
 
-    let some=11            
+    let some=1          
     Work() //11cnffur
 
     }         
