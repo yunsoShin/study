@@ -209,15 +209,14 @@ result = Math.max(numbers) // NaN*/
 
 
 function hoisTing() {       // 블록 시작
-    function Work(){
+    function Work() {
         console.log(some)   //변수접근가능
-        //~~~~~다른작업~~~~~~
+        //~~~~~다른작업~~~~
     }
 
-    let some=1          
+    let some = 1
     Work() //11cnffur
 
-    }         
+}
 hoisTing()
 
-    
