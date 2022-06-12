@@ -210,7 +210,7 @@ result = Math.max(numbers) // NaN*/
 
 function hoisTing() {       // 블록 시작
     function Work() {
-        console.log(some)   //변수접근
+        console.log(some)   //변수
         //~~~~~다른작업~~~~
     }
 
