@@ -208,7 +208,7 @@ let numbers = [1, 7, 2, 9]
 result = Math.max(numbers) // NaN*/
 
 
-function hoisTing() {       // 블록 시작
+/*function hoisTing() {       // 블록 시작
     function Work() {
         console.log(some)   //변수
         //~~~~~다른작업~~~~
@@ -220,3 +220,38 @@ function hoisTing() {       // 블록 시작
 }
 hoisTing()
 
+
+let yunJJang = {name: 'yunsoo',salary:100000}
+
+yunJJang = {
+    name:'yunsoo',
+    salary:10000,
+    raiseSalary(percent){
+        this.salary *=1+percent/100
+    }
+}
+yunJJang.raiseSalary(10)
+console.log(yunJJang);
+
+function Person(first, last, age, gender, interests) {
+
+    // 속성과 메소드 정의
+    this.first = first;
+    this.last = last;
+  //...
+}
+
+let person1 = new Person('Shin', 'yunjjang', 24, 
+'male', ['music', 'programming']);
+
+let person2 = Object.create(person1);
+person2.__proto__
+*/
+
+function Employee(name, salary) {
+    this.name = name
+    this.salary = salary 
+}
+new Employee('Yunsoo', 10000);
+
+    
