@@ -290,7 +290,7 @@ class Person {
     this.first = parts[1]
     } }
 
-const yunsoo = new Person('yunsoo','Shin');
+const yunsoo1 = new Person('yunsoo','Shin');
 
 
 
@@ -360,7 +360,7 @@ obj.name = "이렇게 참조형은 바꿀수있지롱"
 console.log(test.getArray());
 console.log(test.getObject());
 
-*/
+
 
 class ClassWithPrivateField {
     #privateField
@@ -377,4 +377,31 @@ class ClassWithPrivateStaticField {
 }
 
 
+*/
 
+
+class Employee { 
+    constructor(name, salary) {
+        this.name = name
+        this.salary = salary 
+    }
+    raiseSalary(percent) { 
+        this.salary = 1 + percent / 100
+    } 
+}
+    
+class Manager extends Employee{
+    
+    
+    getSalary(){
+        return 
+            this.salary+this.bonus
+        
+    }
+}
+
+const yun = new Employee('yunsoo',2000);
+const boss = new Manager('kimminjae',5000);
+
+console.log(yun)
+console.log(boss)
