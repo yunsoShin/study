@@ -246,7 +246,7 @@ let person1 = new Person('Shin', 'yunjjang', 24,
 
 let person2 = Object.create(person1);
 person2.__proto__
-*/
+
 
 function Employee(name, salary) {
     this.name = name
@@ -254,4 +254,127 @@ function Employee(name, salary) {
 }
 new Employee('Yunsoo', 10000);
 
+
+class Employee { 
+    constructor(name, salary) {
+        this.name = name
+        this.salary = salary 
+    }
+    raiseSalary(percent) { 
+        this.salary = 1 + percent / 100
+    } 
+}
     
+const yun = new Employee('yunsoo',2000);
+console.log(yun)
+
+
+class Person {
+    constructor(last, first) { this.last = last
+    this.first = first }
+    get fullName() {
+    return `${this.last}, ${this.first}` }
+}
+const yunsoo = new Person('yunsoo','Shin');
+const yunName = yunsoo.fullName
+
+*/
+class Person { 
+    constructor(last, first) { 
+        this.last = last
+        this.first = first 
+    }
+    set fullName(value) {
+    const parts = value.split(/,\s*/) 
+    this.last = parts[0]
+    this.first = parts[1]
+    } }
+
+const yunsoo = new Person('yunsoo','Shin');
+
+
+
+/*
+var myObj = {
+    myProp : 1,
+    getProp: function () {
+        return this.myProp;
+    }
+};
+console.log(myObj.myProp); // myProp 에 공개적으로 접근할 수 있다.
+console.log(myObj.getProp()); // getProp() 역시 공개되어 있다.
+
+
+function Gadget() {
+    // 비공개 멤버
+    let name = 'iPod';
+    this.getName = function () {
+        return name;
+    };
+}
+
+const toy = new Gadget();
+
+// name 은 비공개이므로 undefined 가 출력된다.
+console.log(toy.name);
+
+// 공개 메서드에서는 name 에 접근할 수 있다.
+console.log(toy.getName()); // iPod
+
+
+class Test{
+	constructor(){
+    	const name = "yunsoo";
+        this.getName = function(){
+        	return name;
+        }
+    }
+}
+const test = new Test();
+console.log(test);
+console.log(test.name);
+console.log(test.getName());
+
+
+
+class Test{
+	constructor(){
+    	const array = [2,4,6];
+        const object = {
+        	name : "yunsoo"
+        }
+
+        this.getArray = function(){
+        	return array;
+        }
+        this.getObject = function(){
+        	return object;
+        }
+    }
+}
+const test = new Test();
+const arr = test.getArray();
+const obj = test.getObject();
+arr[0] = 0;
+obj.name = "이렇게 참조형은 바꿀수있지롱"
+console.log(test.getArray());
+console.log(test.getObject());
+
+*/
+
+class ClassWithPrivateField {
+    #privateField
+}
+
+class ClassWithPrivateMethod {
+    #privateMethod() {
+        return 'hello world'
+    }
+}
+
+class ClassWithPrivateStaticField {
+    static #PRIVATE_STATIC_FIELD
+}
+
+
+
