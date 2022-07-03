@@ -385,23 +385,20 @@ class Employee {
         this.name = name
         this.salary = salary 
     }
-    raiseSalary(percent) { 
-        this.salary = 1 + percent / 100
+    raiseSalary(value) { 
+        this.salary = this.salary + value
     } 
 }
-    
 class Manager extends Employee{
-    
-    
-    getSalary(){
-        return 
-            this.salary+this.bonus
-        
+    constructor(name,salary,bonus){
+        super(name,salary)
+        this.bonus=bonus;
+
+    }
+    getSalary(value){
+        super.raiseSalary(value);
+        return this.salary
     }
 }
-
 const yun = new Employee('yunsoo',2000);
 const boss = new Manager('kimminjae',5000);
-
-console.log(yun)
-console.log(boss)
